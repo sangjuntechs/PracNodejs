@@ -18,3 +18,22 @@ mongoose.connect('mongodb+srv://sangjun:tkdwns12@practice-zi0wv.mongodb.net/prac
     }).then(() => console.log('mongodb Connected..'))
     .catch(err => console.log(err))
 ```
+
+## mongodb 모델링
+
+## postman을 이용한 register route 만들기
+
+## postman 에서 json형식의 정보 전달
+
+```ts
+{
+    "name": "sangjun",
+    "email": "sangjun@gmail.com",
+    "password": "sangjun1234"
+
+}
+
+{
+    "success": true
+}
+```
