@@ -37,3 +37,5 @@ mongoose.connect('mongodb+srv://sangjun:tkdwns12@practice-zi0wv.mongodb.net/prac
     "success": true
 }
 ```
+
+## nodemon을 활용한 실시간 dev mode

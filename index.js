@@ -23,7 +23,7 @@ mongoose.connect('mongodb+srv://sangjun:tkdwns12@practice-zi0wv.mongodb.net/prac
 
 
 
-app.get('/', (req, res) => res.send('Hello Express.js!'))
+app.get('/', (req, res) => res.send('Hello Express.js & node.js!'))
 
 app.post('/register', (req, res) => {
     // register client에서 가져온 정보를 데이터 베이스에 삽입.
