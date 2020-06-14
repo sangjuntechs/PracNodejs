@@ -2,6 +2,8 @@ const express = require('express')
 const app = express()
 const port = 3000
 const bodyParcer = require('body-parser');
+// develop 상태에 따른 key.js
+const config = require('./config/key');
 
 app.use(bodyParcer.urlencoded({extended:true}));
 app.use(bodyParcer.json());
@@ -9,7 +11,8 @@ app.use(bodyParcer.json());
 const { User } = require("./models/user");
 
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://sangjun:tkdwns12@practice-zi0wv.mongodb.net/practice?retryWrites=true&w=majority'
+//선언한 config에서의 mongoURI 선언
+mongoose.connect(config.mongoURI
     ,{
         useNewUrlParser: true,
         useUnifiedTopology: true,
