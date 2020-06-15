@@ -59,3 +59,5 @@ userSchema.pre('save', function(next){
 ```
 
 비밀번호 해쉬화 성공
+
+#### user.js 에 검증 메소드를 선언하고 index.js loginpassword검증로직 생성

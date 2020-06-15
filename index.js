@@ -40,4 +40,24 @@ app.post('/register', (req, res) => {
     })
 })
 
+app.post('/login', (req, res) => {
+    //요청된 이메일에 대한 정보를 데이터베이스에서 찾음
+    User.findOne({ email: req.body.email }, (err, userInfo) => {
+        if(!userInfo) {
+            return res.json({
+                loginSuccess: false,
+                message: '이메일이 존재하지 않습니다.'
+            })
+        }
+        //이메일이 데이터베이스 내에 존재한다면 비밀번호 검증
+        user.comparePassword(req.body.password, (err, isMatch) => {
+            
+        })
+
+    })
+    
+
+    //비밀번호가 맞다면 token 생성
+})
+
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
